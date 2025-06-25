@@ -5,7 +5,9 @@ exports.parse = function (file,to,callback) {
   var path = require('path');
   var fs = require('fs');
   var fstream = require('fstream');
-  var unzip = require('unzip2');
+  // var unzip = require('unzip2');
+  var unzipper = require('unzipper');
+
   var process = require('process');
   var path = require('path');
   var epub = require(__dirname + '/epubparser.js');
@@ -43,12 +45,12 @@ exports.parse = function (file,to,callback) {
       var writeStream = fstream.Writer(tmp_epub);
 
       readStream
-        .pipe(unzip.Parse())
+        .pipe(unzipper.Parse())
         .pipe(writeStream)
 
       writeStream.on('close', function(){
 
-        
+
         epub.getFileList(tmp_epub,to,function(flist,folder){
           for(var k=0;k<flist.length;k++) {
 

@@ -11,22 +11,22 @@
     "rabbit"
   ],
   "repository": {
-          "type": "git",
-          "url": "https://github.com/saturngod/rabbit-epub.git"
-      },
+    "type": "git",
+    "url": "https://github.com/saturngod/rabbit-epub.git"
+  },
   "author": "saturngod",
   "license": "MIT",
   "dependencies": {
-    "unzip2" : "*",
-    "cli-args" : "*",
-    "mkdirp" : "*",
-    "fstream" : "*",
-    "xml2js" : ">=0.4.9",
-    "zip-folder" : ">=1.0",
-    "rimraf" : ">=2.4.1",
-    "process" : "*"
+    "cli-args": "*",
+    "fstream": "*",
+    "mkdirp": "*",
+    "process": "*",
+    "rimraf": ">=2.4.1",
+    "unzipper": "^0.12.3",
+    "xml2js": ">=0.4.9",
+    "zip-folder": ">=1.0"
   },
-  "bin" : {
-    "rabbit-epub" : "index.js"
+  "bin": {
+    "rabbit-epub": "index.js"
   }
 }
